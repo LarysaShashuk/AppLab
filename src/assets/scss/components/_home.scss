@@ -1,0 +1,272 @@
+#homePage {
+    @include size(100vw, auto);
+    @include flex(column, center, center);
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+
+.header {
+    @include size(100%, auto);
+    @include flex(row, center, space-between);
+    margin-top: 105px;
+
+    @include tablet {
+        margin-top: 50px;
+    }
+
+    @include mobile-w {
+        margin-top: 50px;
+    }
+
+    @include mobile {
+        margin-top: 50px;
+    }
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+    color: $darkBlue;
+    cursor: pointer;
+
+    &__accent {
+        color: $lightYellow;
+    }
+
+    @include mobile-w {
+        font-size: 20px;
+    }
+
+    @include mobile {
+        font-size: 20px;
+    }
+}
+
+.navigation {
+    @include size(auto, auto);
+    @include flex(row, center, space-between);
+
+    &__list {
+        @include size(auto, auto);
+        @include flex(row, center, space-between);
+        padding-right: 40px;
+
+        @include tablet {
+            display: none;
+        }
+
+        @include mobile-w {
+            display: none;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
+        &__item {
+            font-size: 16px;
+            font-weight: 400;
+            text-align: left;
+            color: $darkBlue;
+            margin: 20px;
+            cursor: pointer;
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                border-bottom: 2px solid $darkBlue;
+            }
+
+
+        }
+
+        &__link {
+            color: $darkBlue;
+        }
+    }
+
+}
+
+.mainContent {
+    @include size(100%, auto);
+    @include flex(row, center, space-between);
+    padding-bottom: 40px;
+
+    @include laptop {
+        padding-top: 50px;
+    }
+
+    @include tablet {
+        padding-top: 170px;
+    }
+
+    @include mobile-w {
+        @include flex(column-reverse, center, flex-start);
+        margin-top: 50px;
+    }
+
+    @include mobile {
+        @include flex(column-reverse, center, flex-start);
+        margin-top: 10px;
+    }
+
+}
+
+.textContainer {
+    @include size(calc((530/1170)*100%), auto);
+    @include flex(column, flex-start, center);
+
+    @include mobile-w {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    @include mobile {
+        width: 100%;
+        margin-top: 30px;
+        @include flex(column, center, center);
+    }
+
+    &__award {
+        @include size(auto, auto);
+        @include flex(row, center, flex-start);
+        background-color: $lightGray;
+        border-radius: 18px;
+        font-size: 18px;
+        font-weight: 400;
+        color: $darkBlue;
+
+        @include tablet {
+            font-size: 15px;
+        }
+
+        @include mobile {
+            font-size: 15px;
+        }
+
+        &__iconContainer {
+            @include size(calc((40/365)*100%), 100%);
+            @include flex(column, center, center);
+            background-color: $darkYellow;
+            border-radius: 18px;
+            margin-right: 10px;
+
+        }
+
+        &__icon {
+            @include size(70%, auto);
+        }
+    }
+
+    &__title {
+        margin-top: 30px;
+        font-size: 60px;
+        font-weight: 600;
+        text-align: left;
+        color: $darkBlue;
+        line-height: 1.25;
+
+        @include laptop {
+            font-size: 45px;
+        }
+
+        @include tablet {
+            font-size: 35px;
+        }
+
+        @include mobile-w {
+            font-size: 45px;
+        }
+
+        @include mobile {
+            font-size: 30px;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 25px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.56;
+        text-align: left;
+        color: $darkGray;
+
+        @include tablet {
+            font-size: 15px;
+        }
+    }
+
+    &__links {
+        @include size(100%, auto);
+        margin-top: 25px;
+        @include flex(row, center, flex-start);
+
+        @include tablet {
+            @include flex(column, flex-start, flex-start);
+        }
+
+        &__item {
+            margin-left: 30px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 2.75;
+            text-align: left;
+            color: $lightBlue;
+            cursor: pointer;
+
+            @include tablet {
+                font-size: 13px;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.textContainer__award__iconContainer picture {
+    @include flex(column, center, center);
+    padding: 5px;
+}
+
+.imgContainer {
+    @include size(calc((445/1170)*100%), auto);
+
+    @include mobile-w {
+        width: 60%;
+    }
+
+    @include mobile {
+        width: 60%;
+        margin-top: 30px;
+    }
+}
+
+.callToAction {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    background-color: $lightBlue;
+    color: $white;
+    padding: 20px 40px;
+
+    &:hover {
+        box-shadow: 0px 0px 16px 0px rgba($darkBlue, 0.56);
+    }
+
+    @include mobile-w {
+        font-size: 15px;
+        font-weight: 700;
+        padding: 15px 20px;
+    }
+
+    @include mobile {
+        font-size: 15px;
+        font-weight: 700;
+        padding: 12px 20px;
+    }
+}
