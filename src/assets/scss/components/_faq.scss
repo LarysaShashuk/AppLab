@@ -1,0 +1,127 @@
+#faqPage {
+    @include size(100vw, auto);
+    @include flex(column, center, center);
+}
+
+.headingContent--faqPage {
+
+    @include tablet {
+        margin-top: 50px;
+    }
+
+    @include mobile-w {
+        margin-top: 50px;
+    }
+
+    @include mobile {
+        margin-top: 50px;
+    }
+}
+
+.faqList {
+    @include size(calc((945/1170)*100%), auto);
+    margin-top: 65px;
+    margin-bottom: 140px;
+    @include flex(column, center, flex-start);
+
+
+
+    &__item {
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: $blueBG;
+        @include flex(column, flex-start, flex-start);
+        padding: 23px 38px 18px 50px;
+
+        @include mobile {
+            padding: 18px;
+        }
+
+
+
+        &__questionBlock {
+            width: 100%;
+            @include flex(row, center, space-between);
+
+        }
+
+        &__question {
+            width: auto;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: left;
+            color: $darkBlue;
+
+            @include mobile-w {
+                width: 80%;
+                font-size: 15px;
+            }
+
+            @include mobile {
+                width: 80%;
+                font-size: 15px;
+            }
+        }
+
+        &__icon {
+            display: block;
+            width: 22px;
+            height: 4px;
+            background-color: $darkBlue;
+            position: relative;
+            cursor: pointer;
+
+            @include mobile-w {
+                width: 18px;
+                height: 3px;
+            }
+
+            @include mobile {
+                width: 15px;
+                height: 2px;
+            }
+        }
+
+        &__icon2 {
+            display: block;
+            height: 22px;
+            width: 4px;
+            background-color: $darkBlue;
+            position: relative;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+
+            @include mobile-w {
+                height: 18px;
+                width: 3px;
+            }
+
+            @include mobile {
+                height: 15px;
+                width: 2px;
+            }
+        }
+
+        &__answer {
+            margin-top: 37px;
+            margin-bottom: 60px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.63;
+            text-align: left;
+            color: $darkGray;
+
+            transition: all 0.3s ease 0s;
+
+            @include mobile-w {
+                font-size: 13px;
+            }
+
+            @include mobile {
+                font-size: 13px;
+            }
+        }
+    }
+}

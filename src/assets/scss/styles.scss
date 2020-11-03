@@ -1,0 +1,15 @@
+@import "utils/reset";
+@import "utils/responsive";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/vars";
+
+@import "components/home";
+@import "components/burgerMenu";
+@import "components/advantages";
+@import "components/faq";
+@import "components/common";
+
+.hiddenElement {
+  display: none;
+}
